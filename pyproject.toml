@@ -1,0 +1,12 @@
+[project]
+name = "mazebot-sim"
+version = "0.1.0"
+description = "2D simulator for a maze robot: system identification, firmware in the loop, tuning and learning"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+# Later milestones; milestone 1 runs on the standard library alone.
+viz = ["matplotlib"]
+tune = ["optuna"]
+rl = ["gymnasium", "stable-baselines3"]
