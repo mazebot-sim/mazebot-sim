@@ -58,6 +58,14 @@ CI on GitHub runs the same checks, plus a coverage report, on every push to
 Add a dependency with `uv add <package>` and commit `pyproject.toml` and
 `uv.lock` together.
 
+## Working on it
+
+`main` is protected: every change is a pull request from a branch, and it
+merges only with green CI and the other person's approval. Dependabot opens
+pull requests for new versions of the GitHub Actions and Python dependencies
+once a month. We both work with AI coding agents; their instructions are in
+[`AGENTS.md`](AGENTS.md).
+
 ## Layout
 
 ```

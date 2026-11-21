@@ -15,3 +15,6 @@ adding a new line, not by editing the old one.
 | 2026-11-21 | Runs are headless and deterministic; `experiments/view.py` replays any run with graphics | Batches as fast as possible, and anything trained can still be watched |
 | 2026-11-21 | `firmware/update.sh` wraps the firmware's settings in `#ifndef` when copying, so they can be set with `-D` | Tuning without touching the course repository; same code, same defaults |
 | 2026-11-21 | The RL policy replaces only the corridor steering (the PID); the state machine still navigates | A fair comparison with the PID, and far more likely to train |
+| 2026-11-21 | No firmware in this repository, and nothing that needs it, until the course project's firmware is finished | It is still changing; a copy now would soon be out of date |
+| 2026-11-21 | `main` is protected: pull requests only, green CI and one approval to merge | Both of us, and our AI agents, follow the same review process |
+| 2026-11-21 | Dependabot checks GitHub Actions and Python dependencies monthly, grouped into one pull request each | Pinned versions do not update themselves; monthly keeps the noise down |

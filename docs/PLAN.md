@@ -7,7 +7,11 @@ The one plan we both follow. If it is not in this file, it is not planned.
 - **Tasks** are the checkboxes below. Put your initials on a task before
   starting it, so we never both do the same thing: `- [ ] (JG) ...`.
 - **One branch and one pull request per task.** The other person reviews and
-  merges. Tick the box in the same pull request that does the work.
+  merges. Tick the box in the same pull request that does the work. GitHub
+  enforces it: `main` takes no direct pushes, and a pull request merges only
+  with green CI and one approval.
+- **AI agents** follow [`AGENTS.md`](../AGENTS.md). Review their pull
+  requests like any other.
 - **Decisions** (a choice someone would otherwise ask about later) go in
   [`decisions.md`](decisions.md), one line each.
 - **Measurements** from the robot go in `data/`, listed in
@@ -62,7 +66,9 @@ simulator reports when it touches a wall.
 Done when: the real `state_machine_step()` drives a simulated robot through a
 whole maze, shown as a GIF in the README.
 
-See [`DESIGN.md`](DESIGN.md) for how these fit together.
+See [`DESIGN.md`](DESIGN.md) for how these fit together. Waits for the
+course project's firmware to be finished (`decisions.md`); until then, only
+the tasks that do not need it.
 
 - [x] Python 3.12 with `uv`
 - [x] Decide the open questions at the end of `DESIGN.md`
