@@ -4,7 +4,7 @@ from dataclasses import replace
 
 from mazesim import robot
 from mazesim.params import G05
-from mazesim.robot import FORWARD, BACKWARD, RobotState
+from mazesim.robot import BACKWARD, FORWARD, RobotState
 
 
 def run(state, cmd, seconds, p=G05):

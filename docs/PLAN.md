@@ -75,7 +75,8 @@ See [`DESIGN.md`](DESIGN.md) for how these fit together.
 - [ ] Tape detectors over the goal T
 - [ ] `mazesim/sim.py`: the 5 ms clock, `run()`, `RunResult`
 - [ ] `experiments/view.py`: replay a run with graphics, `--save` to GIF/MP4
-- [ ] CI on GitHub: tests plus the firmware build
+- [x] CI on GitHub: ruff, tests, coverage
+- [ ] CI: add the firmware build
 
 ### 3. Validation against the track
 

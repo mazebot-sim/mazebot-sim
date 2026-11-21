@@ -1,7 +1,7 @@
 import math
 import unittest
 
-from mazesim.geometry import ray_distance, point_segment_distance
+from mazesim.geometry import point_segment_distance, ray_distance
 
 WALL = ((1.0, -1.0), (1.0, 1.0))     # vertical wall at x = 1
 

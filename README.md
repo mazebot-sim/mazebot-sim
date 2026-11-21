@@ -49,7 +49,11 @@ the same versions (`brew install uv` on macOS):
 ```
 uv sync                                          # creates .venv from uv.lock
 uv run python -m unittest discover -s tests -t .
+uv run ruff check .                              # lint; do not run ruff format
 ```
+
+CI on GitHub runs the same checks, plus a coverage report, on every push to
+`main` and every pull request.
 
 Add a dependency with `uv add <package>` and commit `pyproject.toml` and
 `uv.lock` together.

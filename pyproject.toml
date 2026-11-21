@@ -10,3 +10,12 @@ dependencies = []
 viz = ["matplotlib"]
 tune = ["optuna"]
 rl = ["gymnasium", "stable-baselines3"]
+
+[dependency-groups]
+dev = [
+    "coverage>=7.17.4",
+    "ruff>=0.17.6",
+]
+
+[tool.coverage.run]
+source = ["mazesim"]

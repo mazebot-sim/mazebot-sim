@@ -12,7 +12,7 @@ from __future__ import annotations
 import math
 from dataclasses import dataclass
 
-from .params import RobotParams, G05
+from .params import G05, RobotParams
 
 FORWARD, BACKWARD = 1, 0   # DIR_FORWARD, DIR_BACKWARD in styrmodul/logic/drive.h
 
