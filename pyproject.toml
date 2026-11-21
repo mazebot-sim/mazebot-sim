@@ -2,7 +2,7 @@
 name = "mazebot-sim"
 version = "0.1.0"
 description = "2D simulator for a maze robot: system identification, firmware in the loop, tuning and learning"
-requires-python = ">=3.9"
+requires-python = ">=3.12"
 dependencies = []
 
 [project.optional-dependencies]
