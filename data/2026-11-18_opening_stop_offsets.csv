@@ -1,0 +1,17 @@
+# Where the robot stopped before turning right into an opening, autonomous.
+# Test track (team drawing): Läge B has the way ahead open, Läge C a wall
+# ahead. A tape mark on the floor where the rear wheel should be for the
+# turn; offset = how far past the mark the rear wheel stopped (+ past,
+# - short), measured with a ruler. firmware = Styrmodul commit or the change
+# it describes (see the course repository).
+date,place,pwm,firmware,offset_cm,note
+2026-11-18,B,255,slows at the opening then 7 ticks at PWM 90 (before the brake term),6,
+2026-11-18,B,255,slows at the opening then 7 ticks at PWM 90 (before the brake term),12,
+2026-11-18,B,255,slows at the opening then 7 ticks at PWM 90 (before the brake term),11,
+2026-11-18,C,255,same,0,"spot on, three runs"
+2026-11-18,B,255,brake term SM_OPENING_BRAKE_MS 160,6,stops as soon as the opening is confirmed
+2026-11-18,B,255,brake term SM_OPENING_BRAKE_MS 160,6,
+2026-11-18,B,255,brake term SM_OPENING_BRAKE_MS 160,6,
+2026-11-19,B,90,target 200 mm past the near corner,6,
+2026-11-19,B,90,target 200 mm past the near corner,6,
+2026-11-19,B,90,target 200 mm past the near corner,6,
