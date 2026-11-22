@@ -1,0 +1,16 @@
+# D1: turning radius driving left/right by hand (inner side at a third)
+# battery: <V at start> V at start, <V at end> V at end   floor: lab   load: none
+# how: one full circle on open floor; diameter = start point to farthest point; time one circle
+pwm,direction,run,diameter_cm,time_one_circle_s
+90,left,1,,
+90,left,2,,
+90,left,3,,
+90,right,1,,
+90,right,2,,
+90,right,3,,
+255,left,1,,
+255,left,2,,
+255,left,3,,
+255,right,1,,
+255,right,2,,
+255,right,3,,

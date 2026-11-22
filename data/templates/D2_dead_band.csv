@@ -1,0 +1,16 @@
+# D2: smallest PWM difference that turns the robot (temporary Styrmodul build)
+# battery: <V at start> V at start, <V at end> V at end   floor: lab   load: none
+# how: left side at 90 - X, right at 90; drive 2 m from a tape line; offset + to the left, compare with B4
+x_pwm,run,distance_m,offset_cm
+5,1,2.0,
+5,2,2.0,
+10,1,2.0,
+10,2,2.0,
+15,1,2.0,
+15,2,2.0,
+20,1,2.0,
+20,2,2.0,
+30,1,2.0,
+30,2,2.0,
+40,1,2.0,
+40,2,2.0,

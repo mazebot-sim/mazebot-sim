@@ -1,0 +1,10 @@
+# C3: gyro scale over 5 full turns by hand
+# firmware: Sensormodul <commit>
+# how: tape mark on the floor and on the robot; 5 full turns until the marks meet; heading before and after
+direction,run,turns,heading_before_deg,heading_after_deg
+left,1,5,,
+left,2,5,,
+left,3,5,,
+right,1,5,,
+right,2,5,,
+right,3,5,,

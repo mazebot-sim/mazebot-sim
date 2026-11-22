@@ -1,0 +1,7 @@
+# A3: side sensor set-back check, robot straight in a corridor
+# firmware: Sensormodul <commit>
+# how: ruler from each chassis side to its wall, compared with the GUI
+place,ruler_left_cm,ruler_right_cm,gui_left_cm,gui_right_cm
+1,,,,
+2,,,,
+3,,,,
