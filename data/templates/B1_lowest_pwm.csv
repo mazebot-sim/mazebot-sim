@@ -1,0 +1,15 @@
+# B1: lowest PWM that moves the robot from standstill
+# battery: <V at start> V at start, <V at end> V at end   floor: lab   load: none
+# how: from standstill, start at 10, step up by 5; moved = yes/no
+pwm,moved
+10,
+15,
+20,
+25,
+30,
+35,
+40,
+45,
+50,
+55,
+60,

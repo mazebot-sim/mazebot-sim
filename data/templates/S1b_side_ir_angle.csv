@@ -1,0 +1,20 @@
+# S1b: side IR at an angle to the wall
+# firmware: Sensormodul <commit>
+# how: as S1, cardboard turned; protractor or printed angle template
+sensor,true_cm,angle_deg,min_cm,max_cm
+left,10,0,,
+left,10,15,,
+left,10,30,,
+left,10,45,,
+left,20,0,,
+left,20,15,,
+left,20,30,,
+left,20,45,,
+right,10,0,,
+right,10,15,,
+right,10,30,,
+right,10,45,,
+right,20,0,,
+right,20,15,,
+right,20,30,,
+right,20,45,,

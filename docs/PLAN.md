@@ -29,21 +29,29 @@ Roles, so the work can run in parallel (swap at least once):
 ## Now: measure the robot while we have it
 
 Only possible while the course runs. Comes before everything else. What we
-already have, and how to measure each item, is in
-[`data/README.md`](../data/README.md).
+already have is in [`data/README.md`](../data/README.md); exactly how to
+measure each item, how often and in what form, is in
+[`data/PROTOCOL.md`](../data/PROTOCOL.md).
 
-- [ ] A1–A3: fork reach, rear reach, sensor positions
-- [ ] B1: speed at more PWM values, and the lowest PWM that moves
-- [ ] B2: start from standstill at PWM 90 and 255
-- [ ] C1: rotation rate on the spot, both directions
-- [ ] C2: slide in a half turn with the 10 % trim
-- [ ] C3: gyro scale over 5 turns
-- [ ] S1: IR raw readings vs distance
-- [ ] S2: gyro standing still for 5 minutes
-- [ ] S3: where on the goal T the tape sensor triggers
-- [ ] T1: track details
-- [ ] Add a CSV telemetry log to the course GUI (needed for V1)
-- [ ] V1: logged validation runs with video
+Level 1 (the learned corridor steering) first, in the order of the
+protocol's sessions:
+
+- [ ] Session 1: A3 sensor positions, T1 track details, B4 pull to one side
+- [ ] Session 2: B1 speed at more PWM values and the lowest that moves,
+      B2 start from standstill, D1 turning radius, D2 dead band
+      (needs a temporary Styrmodul build)
+- [ ] Session 3: S1 and S1b side IR vs distance and angle, S2 gyro standing
+      still, C3 gyro scale, V2 straight corridor with today's PID
+- [ ] Add a CSV telemetry log to the course GUI (improves V2, needed for V1
+      and V3; a change in the course repository the team must agree to)
+
+Then, for whole runs:
+
+- [ ] Session 4: A1, A2 fork and rear reach, A4 weight, B3 roll-out,
+      B5 battery effect
+- [ ] Session 5: C1 rotation rate, C2 slide with the trim, C4 autonomous
+      turn accuracy, S3 tape sensor at the goal T
+- [ ] Session 6: V1 manoeuvres and V3 whole mazes, logged, with video
 
 ## Milestones
 

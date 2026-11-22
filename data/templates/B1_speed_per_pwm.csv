@@ -1,0 +1,28 @@
+# B1: steady speed per PWM, flying start
+# battery: <V at start> V at start, <V at end> V at end   floor: lab   load: none
+# how: 50 cm run-up; time from the front passing mark 1 to mark 2; 1 m below PWM 150, 2 m from 150 up; 240 fps
+pwm,run,distance_m,time_s
+30,1,1.0,
+30,2,1.0,
+30,3,1.0,
+40,1,1.0,
+40,2,1.0,
+40,3,1.0,
+60,1,1.0,
+60,2,1.0,
+60,3,1.0,
+90,1,1.0,
+90,2,1.0,
+90,3,1.0,
+120,1,1.0,
+120,2,1.0,
+120,3,1.0,
+150,1,2.0,
+150,2,2.0,
+150,3,2.0,
+200,1,2.0,
+200,2,2.0,
+200,3,2.0,
+255,1,2.0,
+255,2,2.0,
+255,3,2.0,

@@ -1,0 +1,13 @@
+# B0: reference run, the battery check for a driving session
+# battery: <V at start> V at start, <V at end> V at end (if a multimeter is at hand)   floor: lab   load: none
+# how: PWM 90, 50 cm run-up, time 1 m from the front passing mark 1 to mark 2; at the start and the end of every driving session, and every 20-30 min in between; clock = time of day
+phase,clock,run,time_s,battery_v
+start,,1,,
+start,,2,,
+start,,3,,
+middle,,1,,
+middle,,2,,
+middle,,3,,
+end,,1,,
+end,,2,,
+end,,3,,

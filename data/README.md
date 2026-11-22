@@ -37,19 +37,34 @@ depends on it.
 
 | # | What | How | Feeds |
 |---|---|---|---|
-| A1 | Fork reach from the centre | Ruler, centre to fork tip | `front_reach`, collisions |
-| A2 | Rear reach from the centre | Ruler, centre to the rearmost point | `rear_reach`, collisions in turns |
-| A3 | Position and angle of each IR sensor, and of the 11 tape detectors | Ruler from the centre | Sensor rays, tape model |
-| B1 | Speed at more PWM values | Time 1 m at PWM 40, 60, 150, 200; find the lowest PWM that moves | Is the speed line straight? Real `pwm_start` |
-| B2 | Acceleration from standstill | Film a start at PWM 90 and 255 next to a ruler | `accel_tau` |
-| C1 | Rotation rate on the spot | Time 3 full turns at PWM 100 and 145, both directions | `track_width_eff` |
-| C2 | Slide in a half turn with the 10 % trim | Tape-cross test again | `rotation_left_gain` |
-| C3 | Gyro scale | Turn exactly 5 turns by hand on a tape mark, compare with the gyro | Gyro model |
-| S1 | IR raw readings vs distance | Each sensor against a wall every 2 cm; 50 readings each | Sensor curve and noise |
-| S2 | Gyro standing still | Log 5 minutes | Noise; checks the drift |
-| S3 | Tape sensor at the goal T | How far onto the T before the robot sees it | Tape model |
-| T1 | Track details | Exact corridor width, wall thickness, goal table size and position | Maze geometry |
-| V1 | Validation runs | Telemetry log plus video from above: Läge A, B, C; a straight corridor at PWM 90 and 255; two whole mazes | Milestone 3 |
+| A1 | Fork reach from the centre | Ruler, centre to the fork tip and its outer corners | `front_reach`, collisions |
+| A2 | Rear reach from the centre | Ruler, centre to the rearmost point and each wheel's outer corner | `rear_reach`, collisions in turns |
+| A3 | **L1** Position and angle of each IR sensor, and of the 11 tape detectors | Ruler from the centre; check the side sensors' set-back in a corridor against the GUI | Sensor rays, tape model |
+| A4 | Weight with and without the object; the object's size | Kitchen scale, ruler | Motion with the object (later) |
+| B0 | Reference run, every driving session | PWM 90 over 1 m, 3 times, at the start and end of the session and every 20–30 min | How much the battery changed the speed during a session |
+| B1 | **L1** Speed at more PWM values | Time 1 m (2 m from 150 up) at PWM 30, 40, 60, 90, 120, 150, 200, 255, 3 runs each; find the lowest PWM that moves | Is the speed line straight? Real `pwm_start`; the inner side when steering |
+| B2 | **L1** Acceleration from standstill | Film a start at PWM 90 and 255 next to a tape measure, position every 0.1 s | `accel_tau` |
+| B3 | Roll-out | Film a stop from PWM 90 and 255, position every 0.05 s | `coast_tau` |
+| B4 | **L1** Pull to one side | Drive 3 m from a straight tape line with equal PWM, measure the offset, PWM 90 and 255 | Straight-line asymmetry |
+| B5 | Battery effect | B1 at PWM 90 and 255 with a nearly flat battery | How much to randomise speed |
+| C1 | Rotation rate on the spot | Time 3 full turns at PWM 100 and 255 (manual), both directions | `track_width_eff` |
+| C2 | Slide in a half turn with the 10 % trim | Tape-cross test again, both directions, with and without the object | `rotation_left_gain` |
+| C3 | **L1** Gyro scale | Turn exactly 5 turns by hand on a tape mark, compare with the gyro | Gyro model |
+| C4 | Autonomous turn accuracy | Real angle after the turn at Läge C (90°) and Läge A (180°) vs the GUI heading | Turn model, validation |
+| D1 | **L1** Turning radius while driving | Drive a full circle left and right by hand (inner side at a third), PWM 90 and 255; measure the diameter and the time per circle | How much a difference between the sides turns the robot; whether the inner side stalls at PWM 30 |
+| D2 | **L1** Smallest PWM difference that turns the robot | Temporary Styrmodul build: left at 90 − X, right at 90, X = 5–40; drive 2 m, measure the sideways offset | The firmware's dead band (`PID_STEER_MIN`, a guess); the level 1 policy's steering |
+| S1 | **L1** Side IR reading vs distance | Each side sensor against the track's cardboard from 4 to 30 cm in 2 cm steps; lowest and highest GUI value over ~5 s | Sensor curve and noise |
+| S1b | **L1** Side IR at an angle | As S1, cardboard turned 0°, 15°, 30°, 45° at 10 and 20 cm | Sensor error when the robot points askew |
+| S2 | **L1** Gyro standing still | Heading every 30 s for 5 min, 3 power-ons | Noise; checks the drift |
+| S3 | Tape sensor at the goal T | How far onto the T before the robot sees it; what the start line shows | Tape model |
+| T1 | **L1** Track details | Exact corridor width, wall thickness, goal table size and position | Maze geometry |
+| V1 | Validation: manoeuvres | Telemetry log plus video from above: Läge A, B, C at PWM 90 and on the way back at 255 | Milestone 3 |
+| V2 | **L1** Validation: straight corridor | Video from above of a 2 m corridor at PWM 90 and 255 with today's PID; offset from the middle every 20 cm | The zigzag to reproduce; the baseline for level 1 |
+| V3 | Validation: whole mazes | Two whole mazes, search and way back, every wall touch noted | Milestone 3 |
+
+**L1**: needed for level 1, the learned corridor steering. How to do each one
+is in [`PROTOCOL.md`](PROTOCOL.md); empty files to fill in are in
+[`templates/`](templates/).
 
 ## Files
 

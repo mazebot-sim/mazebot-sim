@@ -1,0 +1,15 @@
+# T1: corridor width, wall thickness and height
+# how: tape measure at floor level, at the side sensors' height
+what,place,value_cm
+corridor_width,1,
+corridor_width,2,
+corridor_width,3,
+corridor_width,4,
+corridor_width,5,
+corridor_width,6,
+corridor_width,7,
+corridor_width,8,
+corridor_width,9,
+corridor_width,10,
+wall_thickness,1,
+wall_height,1,
