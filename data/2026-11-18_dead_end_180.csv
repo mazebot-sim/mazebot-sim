@@ -1,0 +1,10 @@
+# The 180 in the dead end at Läge A, autonomous, PWM 90, firmware that turned
+# a fixed 180 degrees from where the robot pointed (before turns counted
+# from the corridor heading). Side distances (cm) and heading (degrees) read
+# off the GUI; askew estimated by eye, "left" seen from the fork. The
+# heading may have moved a little while it was written down.
+run,phase,left_cm,right_cm,front_cm,heading_deg,askew_by_eye
+1,before,11,14,11,57.8,15-20 deg left
+1,after,8,18,74,-124.5,20 deg left
+2,before,10,15,11,35.0,20 deg left
+2,after,7,19,72,-149.5,20 deg left

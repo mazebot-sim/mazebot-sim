@@ -1,0 +1,12 @@
+# Gyro heading with the robot standing still after power-on.
+# Robot G05 powered on and not touched for the first 2 s (bias calibration in
+# Sensormodul); heading read off the GUI ("Kurs", degrees) by eye. One run.
+# t_s = 0 is when the GUI first showed a value, some seconds after power-on.
+t_s,heading_deg
+0,-2.7
+10,-2.9
+60,-4.8
+120,-6.8
+180,-8.8
+240,-9.9
+300,-12.0

@@ -1,0 +1,13 @@
+# Steady speed at two PWM values, flying start.
+# Robot G05 on the lab floor, battery state not noted.
+# Tape marks 1 m (PWM 90) or 2 m (PWM 255) apart; the robot started 30-50 cm
+# before the first mark; time from the robot's front passing the first mark
+# to it passing the second, by eye with a phone stopwatch. Manual driving,
+# straight forward.
+pwm,distance_m,time_s
+90,1.0,3.31
+90,1.0,3.37
+90,1.0,3.38
+255,2.0,2.17
+255,2.0,2.19
+255,2.0,2.27

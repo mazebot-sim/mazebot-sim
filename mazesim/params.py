@@ -22,7 +22,8 @@ class RobotParams:
     speed_slope: float = 0.00368      # m/s per PWM step, derived from the two
     pwm_start: float = 9.0            # derived: the line meets zero speed here
     accel_tau: float = 0.15           # guess: measure B2 (start from standstill)
-    coast_tau: float = 0.07           # derived: ~2 cm roll-out at 0.3 m/s (SM_OPENING_ROLLOUT_MS)
+    coast_tau: float = 0.07           # guess: the firmware's own guess, ~2 cm roll-out at
+                                      # 0.3 m/s (SM_OPENING_ROLLOUT_MS); measure B2
 
     # --- Rotating on the spot ---
     track_width_eff: float = 0.30     # guess: skid steering turns slower than the wheel
@@ -35,7 +36,7 @@ class RobotParams:
     # --- Sensors ---
     ir_short_range: tuple = (0.04, 0.27)   # measured: GP2Y0A41SK0F, side and front-left
     ir_long_range: tuple = (0.20, 1.50)    # data sheet: GP2Y0A02YK0F, front-right
-    sensor_lag: float = 0.15          # derived 2026-11-18 from the turn into Läge B
+    sensor_lag: float = 0.15          # estimate set 2026-11-17, never measured on its own
     gyro_drift_dps: float = -2.0 / 60  # measured 2026-11-19: -2 degrees a minute
 
     # --- Firmware timing ---
